@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <title>Cardfight Vanguard Plus (CFVplus) - Beta V 1.2</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href = "../css/basic.css">
+
+        <script type="text/javascript" src="../bootstrap/js/jquery-3.4.0.min.js"></script>
+        <!-- Bootstrap Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../bootstrap/js/jquery-3.4.0.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <a class="navbar-brand" href="../index.html"><img src="../img/CFVplus" width="120" height="60"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link"  href="./how_to_play.html">How to Play</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="./card_search.html">Card Database</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="./deck_builder.html">Deck Builder</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link active"  href="./character_fights.html">Character Fights</a>
+                </li> -->
+              </ul>
+          </div>
+      </nav>
+      <div class="container-fluid">
+        <br>
+      <div class = "row">
+
+        <div class = "col-md-3">
+            <h5>How to Play:</h5>
+        </div>
+        <div class = "col-md-3">
+          <h4 id = "turn">Turn: Player</h4>
+          <button type="button" class="btn btn-primary" onclick="attack()" >Next Attack</button>
+          <button type="button" class="btn btn-secondary" onclick="UpdateTurn()">Next Turn</button>
+          
+
+          <br><br>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Attack Effect:</h5>
+              <p class="card-text" id="attack-effect"><br><br><br></p>
+            </div>
+          </div>
+
+          <br><br>
+          <div class="card">
+          <form>
+            <div class="form-group">
+              <label for="Power">Enter attack power:</label>
+              <input type="number" id ="player-attack" placeholder="Attack Power">
+              <button type="button" class="btn btn-success" onclick="guard()">Attack</button>
+            </div>
+          </form>
+          </div>
+
+
+      </div>
+        <div class = "col-md-3">
+          <img width ="100%" height="100%" id = "character-image" src="../img/Character_Fights/Aichi/Barcgal.png" >
+        </div>
+        <div class = "col-md-3">
+            <div class = "card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Fire Elemental (Imaginary Gift: Force)</li>
+                <li class="list-group-item" id = "damage">Damage: 0</li>
+                <li class="list-group-item" id = "grade">Grade: 0</li>
+                <li class="list-group-item" id = "power" >Power: 6000</li>
+                <li class="list-group-item">Critical: 1</li>
+                <li class="list-group-item" id= "marker">Gift Marker Counter: 0</li>
+              </ul>
+              <div class="card-body">
+                <h5>Base Vanguard Effects:</h5>
+                <p class="card-text">
+                  (VC):When this unit is dealt damage, it gets [Power]+10000 until end of turn.<br>
+                  (VC):When this unit is attacking, player rolls a dice as many times equal to this unit's grade. 
+                  Apply the effect shown depending on the result.
+                  <br>
+                  (These effects cannot be removed by any effect or by deletion)
+                </p>
+              </div>
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="../renderer.js"></script>
+    <script src="../js/character_fight.js"></script>
+    </body>
+
+</html>
