@@ -265,7 +265,7 @@ function showCard(card){
     var sql = 'SELECT * FROM "MasterStandardList" WHERE CardNumber=?';
     const row = db.prepare(sql).get(card);
     console.log(row);
-    let picture = "../img/"+row.CardNumber.substring(0, 6)+"/"+row.CardNumber+".png";
+    let picture = "../img/"+row.CardNumber.substring(0, 6)+"/"+row.CardNumber+".jpg";
     document.getElementById("cardPicture").src=picture;
     document.getElementById("cardName").innerHTML = "Name: " + row.Name;
     document.getElementById("cardGrade").innerHTML = "Grade: " + row.Grade;

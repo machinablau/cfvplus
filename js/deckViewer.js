@@ -73,7 +73,7 @@ function showCard(card){
     const db = require('better-sqlite3')(cfvdb);
     var sql = 'SELECT * FROM "MasterStandardList" WHERE CardNumber=?';
     const row = db.prepare(sql).get(card);
-    let picture = "../img/"+row.CardNumber.substring(0, 6)+"/"+row.CardNumber+".png";
+    let picture = "../img/"+row.CardNumber.substring(0, 6)+"/"+row.CardNumber+".jpg";
     document.getElementById("cardPicture").src=picture;
     document.getElementById("cardName").innerHTML = "Name: " + row.Name;
     document.getElementById("cardGrade").innerHTML = "Grade: " + row.Grade;
@@ -147,7 +147,7 @@ function listTable(result, t){
     
 
 
-    let picture = "../img/"+result.Number.substring(0, 6)+"/"+result.Number+".png";
+    let picture = "../img/"+result.Number.substring(0, 6)+"/"+result.Number+".jpg";
     //document.getElementById("cardPicture").src=picture
     var link = document.createElement("a");
     link.href = "#";
