@@ -1,18 +1,17 @@
-# electron-quick-start
+## CFV+ Deckbuilder Program
 
-**Clone and run for a quick way to see Electron in action.**
+To use, you will need to familarize yourself with the Electron environment.
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+https://www.electronjs.org/
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+## Technologies used
 
-A basic Electron application needs just these files:
+HTML, CSS, Javascript
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+Bootstrap was used for the design and grid system
 
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
+SQLite was used for the database. You will need an editor to change in the information.
+
 
 ## To Use
 
@@ -20,13 +19,22 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/electron/electron-quick-start
+git clone https://github.com/machinablau/cfvplus.git
 # Go into the repository
-cd electron-quick-start
+cd cfvplus
 # Install dependencies
 npm install
+# Fix on one of the SQLite module
+node_modules/.bin/electron-rebuild -f -w better-sqlite3
 # Run the app
 npm start
+```
+```bash
+# To create a windows application
+npm run create_Plus_WIN
+
+# To create a Mac Application
+npm run create_Plus_MAC
 ```
 
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
@@ -39,7 +47,3 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 - [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
 - [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
 - [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
-
-## License
-
-[CC0 1.0 (Public Domain)](LICENSE.md)
